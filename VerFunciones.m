@@ -1,4 +1,4 @@
-% 'verFunciones(N)' es una funcion definida por el usuario mediante el fichero 'verFunciones.m'.
+% 'VerFunciones(N)' es una funcion definida por el usuario mediante el fichero 'VerFunciones.m'.
 %
 % Grafica, en una sola figura y en sus respectivos ejes coordenados, las siguientes 4 funciones:
 % - cos(3*pi*0.01*n)
