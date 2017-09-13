@@ -1,0 +1,38 @@
+
+function ContinuoDiscreto(F,N,k)
+
+n = 0:1:N; % Muestras.
+
+% Frecuencias.
+Wd = (F*2*pi+2*k*pi);
+
+% Gráficas en mismo eje.
+
+figure(1);  % Crea Figura 1.
+grid; % Cuadrícula.
+axis([0,N,-1.1,1.1]);
+title("Señal continua vs señal en tiempo discreto")
+xlabel('n');
+ylabel('sen(wt)');
+hold on; % Añade cambios sin borrar.
+plot(n, sin(2*pi*F*n),'m','linewidth',5); % Señal continua
+stem(n, sin(Wd*n), 'r.'); % Señal en tiempo discreto
+
+hold off;
+
+figure(2);  % Crea Figura 2.
+subplot(2,1,2); % Eje 1.
+stem(n, sin(Wd*n), 'm.'); % Señal en tiempo discreto
+grid; % Cuadrícula.
+axis([0,N,-1.1,1.1]);
+title("Señal en tiempo discreto")
+xlabel('n');
+ylabel('sen(wt)');
+
+subplot(2,1,1); % Eje 2.
+plot(n, sin(2*pi*F*n),'m','linewidth',4); % Señal continua
+grid; % Cuadrícula.
+axis([0,N,-1.1,1.1]);
+title("Señal continua")
+xlabel('n');
+ylabel('sen(wt)');
